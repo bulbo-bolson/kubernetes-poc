@@ -1,18 +1,18 @@
-piVersion: apps/v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nginx-deployment
+  name: deployment-test
   labels:
-    app: nginx
+    app: front
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nginx
+      app: front
   template:
     metadata:
       labels:
-        app: nginx
+        app: front
     spec:
       containers:
       - name: nginx
